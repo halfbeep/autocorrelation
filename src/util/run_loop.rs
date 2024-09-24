@@ -18,7 +18,7 @@ use rounding::round_to_period;
 mod kraken;
 use kraken::get_kraken_data;
 
-// Placeholder for your async data fetching function
+// async data fetching function
 async fn fetch_data_and_update_map(
     results_map: Arc<RwLock<HashMap<NaiveDateTime, Option<f64>>>>,
     time_period: &str, // Pass as a reference
@@ -65,7 +65,7 @@ async fn fetch_data_and_update_map(
     }
 }
 
-// This function is now asynchronous, so you can use async sleep
+// asynchronous for async sleep
 pub async fn run_autocorrelation_loop(
     results_map: Arc<RwLock<HashMap<NaiveDateTime, Option<f64>>>>,
     time_period: String, // Keep ownership of time_period
