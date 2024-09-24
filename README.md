@@ -1,4 +1,4 @@
-I use this tool for analysing the PAX time series from Kraken as a proxy for gold prices. It is useful for detecting high-frequency changes (1 minute)
+I use this tool for analysing the PAX time series from Kraken as a proxy for spot Gold prices. It is useful for detecting high-frequency changes (1 minute)
 
   $\hat\rho_k$​ = $\sum_{t = 1}^{n-k}  (X_t-\overline{X})(X_{t+k}-\overline{X})\over\sum_{t = 1}^{n}  (X_t-\overline{X})^2$
 
