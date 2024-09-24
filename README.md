@@ -9,4 +9,4 @@ where:
 -   *n* is the total number of returns
 
 
-Across a 3 hr observation window, 1 minute lag running for 36 hrs, autocorrelation ranged between -0.324 (high) and -0.595 (low); meaning the serial correlation is never positive
+Across a 3 hr observation window, 1 minute lag running for 36 hrs, autocorrelation ranged between -0.324 (high) and -0.608 (low); meaning the serial correlation of Gold never seems to be positive, albeit PAX is only a proxy
