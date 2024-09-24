@@ -69,7 +69,7 @@ pub async fn get_kraken_data(
                 return None; // Ensure OHLC has enough fields (timestamp, o, h, l, c)
             }
 
-            debug!("OHLC: {} {} {} {}", &ohlc[0], &ohlc[1], &ohlc[2], &ohlc[3]);
+            debug!("Timestamp & OHLC: {} {} {} {} {}", &ohlc[0], &ohlc[1], &ohlc[2], &ohlc[3], &ohlc[4]);
 
             // ohlc[0] contains the timestamp, which may be an integer or string
             let timestamp = match &ohlc[0] {
@@ -94,11 +94,13 @@ pub async fn get_kraken_data(
                 _ => return None,
             };
 
+            /*
             let low_price = match &ohlc[3] {
                 Value::Number(n) => n.as_f64().unwrap_or(0.0),
                 Value::String(s) => s.parse::<f64>().unwrap_or(0.0),
                 _ => return None,
             };
+            */
 
             let close_price = match &ohlc[4] {
                 Value::Number(n) => n.as_f64().unwrap_or(0.0),
@@ -106,8 +108,8 @@ pub async fn get_kraken_data(
                 _ => return None,
             };
 
-            // Calculate the average price (could use any of ohl or c)
-            let average_price = (open_price + high_price + low_price + close_price) / 4.0;
+            // Calculate the close weighted average price (ohcc/4)
+            let average_price = (open_price + high_price + close_price + close_price) / 4.0;
 
 
 
