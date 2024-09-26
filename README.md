@@ -31,7 +31,7 @@ Ensure you have **Rust** installed on your system. You can install Rust via [rus
     
     Copy code
     
-    `git clone https://github.com/halfbeep/autocorrelation
+    `git clone https://github.com/halfbeep/autocorrelation  
     cd autocorrelation` 
     
 2.  Set up the environment variables in a `.env` file for the number of periods and time period:
@@ -43,7 +43,7 @@ Ensure you have **Rust** installed on your system. You can install Rust via [rus
     `NO_OF_PERIODS=180   # Set this to 180 periods (for 3 hours of 1-minute intervals)`
     `TIME_PERIOD=minute  # 1-minute intervals for autocorrelation` 
     
-3.  Build the project:
+4.  Build the project:
     
     bash
     
@@ -51,7 +51,7 @@ Ensure you have **Rust** installed on your system. You can install Rust via [rus
     
     `cargo build` 
     
-4.  Run the program:
+5.  Run the program:
     
     bash
     
